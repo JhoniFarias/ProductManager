@@ -1,4 +1,5 @@
-﻿using ProductContext.Domain.Repositories;
+﻿using ProductContext.Application.UseCases.Product.Commands.interfaces;
+using ProductContext.Domain.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;

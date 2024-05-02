@@ -1,7 +1,9 @@
 ﻿using AutoMapper;
-using ProductContext.Communication.Dtos;
+using ProductContext.Application.DTOs;
+using ProductContext.Application.UseCases.Product.Queries.interfaces;
+using ProductContext.Domain;
 using ProductContext.Domain.Repositories;
-using ProductContext.Shared.Exceptions;
+
 
 namespace ProductContext.Application.UseCases.Product.Queries
 {

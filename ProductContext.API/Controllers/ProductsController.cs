@@ -1,8 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ProductContext.Application.UseCases.Product.Commands;
-using ProductContext.Application.UseCases.Product.Queries;
-using ProductContext.Communication.Dtos;
-using ProductContext.Domain.Entities;
+using ProductContext.Application.DTOs;
+using ProductContext.Application.UseCases.Product.Commands.interfaces;
+using ProductContext.Application.UseCases.Product.Queries.interfaces;
 
 namespace ProductContext.API.Controllers
 {
@@ -34,8 +33,8 @@ namespace ProductContext.API.Controllers
         #endregion
 
         [HttpGet("search")]
-        [ProducesResponseType(typeof(ProductDto), StatusCodes.Status200OK)]
-        [ProducesResponseType(typeof(ProductDto), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ResponseProductDto), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> Search([FromQuery] RequestProductDto request)
         {
             var products = await _requestProductByFilterUseCase.Handle(request);

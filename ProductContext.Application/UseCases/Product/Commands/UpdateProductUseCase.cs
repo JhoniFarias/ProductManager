@@ -1,11 +1,10 @@
 ﻿using AutoMapper;
 using ProductContext.Domain.Repositories;
-using ProductContext.Shared.Validators;
-using ProductContext.Shared.Exceptions;
-using ProductContext.Communication.Dtos;
-using ProductContext.Domain.Entities;
-using ProductContext.Infrastructure.Repositories;
-using Org.BouncyCastle.Utilities;
+using ProductContext.Domain;
+using ProductContext.Application.DTOs;
+using ProductContext.Domain.Validators;
+using FluentValidation;
+using ProductContext.Application.UseCases.Product.Commands.interfaces;
 
 namespace ProductContext.Application.UseCases.Product.Commands
 {
@@ -32,8 +31,6 @@ namespace ProductContext.Application.UseCases.Product.Commands
 
         public async Task Validate(long id, ProductDto productDto)
         {
-            var validator = new ProductValidator();
-            var result = validator.Validate(productDto);
 
             var product = await _productRepository.GetByIdAsync(id);
 
@@ -41,12 +38,6 @@ namespace ProductContext.Application.UseCases.Product.Commands
             {
                 throw new InvalidProductException("O produto não existe");
             }
-
-            if (!result.IsValid)
-            {
-                throw new InvalidProductException(result.Errors.Select(p => p.ErrorMessage));
-            }
-
 
         }
     }

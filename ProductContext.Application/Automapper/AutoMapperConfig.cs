@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using ProductContext.Communication.Dtos;
+using ProductContext.Application.DTOs;
 using ProductContext.Domain.Entities;
 
 namespace ProductContext.API.Automapper
@@ -8,10 +8,13 @@ namespace ProductContext.API.Automapper
     {
         public AutomapperConfig()
         {
-            CreateMap<ProductDto, Product>();
-            CreateMap<Product, ProductDto>()
-                .ForMember(p => p.CNPJ, m => m.MapFrom(m => m.Suplier.CNPJ))
-                .ForMember(p => p.SuplierName, m => m.MapFrom(m => m.Suplier.Description));
+            CreateMap<ProductDto, Product>()
+                .ConstructUsing(x => new Product(x.Description, x.ManufactureDate, x.ExpirationDate, x.SuplierId, x.IsActive));
+
+            CreateMap<Product, ResponseProductDto>()
+                 .ForPath(p => p.Suplier.Id, m => m.MapFrom(m => m.Suplier.Id))
+                 .ForPath(p => p.Suplier.CNPJ, m => m.MapFrom(m => m.Suplier.CNPJ))
+                 .ForPath(p => p.Suplier.Description, m => m.MapFrom(m => m.Suplier.Description));
         }
     }
 }

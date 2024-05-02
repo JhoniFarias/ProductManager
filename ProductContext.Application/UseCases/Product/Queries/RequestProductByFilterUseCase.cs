@@ -1,9 +1,11 @@
 ﻿using ProductContext.Infrastructure;
 using AspNetCore.IQueryable.Extensions;
 using Microsoft.EntityFrameworkCore;
-using ProductContext.Communication.Dtos;
+using ProductContext.Application.DTOs;
 using AutoMapper;
 using ProductContext.Domain.Entities;
+using ProductContext.Application.UseCases.Product.Queries.interfaces;
+
 
 namespace ProductContext.Application.UseCases.Product.Queries
 {
@@ -17,7 +19,7 @@ namespace ProductContext.Application.UseCases.Product.Queries
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<ProductDto>> Handle(RequestProductDto request)
+        public async Task<IEnumerable<ResponseProductDto>> Handle(RequestProductDto request)
         {
             IQueryable<Domain.Entities.Product> query = _context.Products.Include(a => a.Suplier);
 
@@ -44,7 +46,7 @@ namespace ProductContext.Application.UseCases.Product.Queries
 
             List<Domain.Entities.Product> products = await query.Take(request.Limit.Value).ToListAsync();
 
-            return products.Select(_mapper.Map<ProductDto>);
+            return products.Select(_mapper.Map<ResponseProductDto>);
         }
     }
 }

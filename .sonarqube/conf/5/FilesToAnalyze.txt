@@ -1,0 +1,7 @@
+﻿C:\Users\jhoni\source\repos\ProductContext\ProductContext.Domain\Entities\Entity.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Domain\Entities\Product.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Domain\Entities\Suplier.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Domain\Exceptions\InvalidProductException.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Domain\Exceptions\NotFoundProductException.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Domain\Repositories\IProductRepository.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Domain\Validators\ProductValidator.cs

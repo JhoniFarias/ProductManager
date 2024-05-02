@@ -1,0 +1,5 @@
+﻿C:\Users\jhoni\source\repos\ProductContext\ProductContext.Infrastructure\AppDbContext.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Infrastructure\Migrations\20240428032440_Inicial.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Infrastructure\Migrations\20240428032440_Inicial.Designer.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Infrastructure\Migrations\AppDbContextModelSnapshot.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Infrastructure\Repositories\ProductRepository.cs

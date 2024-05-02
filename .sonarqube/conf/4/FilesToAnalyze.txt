@@ -1,0 +1,15 @@
+﻿C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\Controllers\ProductsController.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\Extensions\DatabaseMigrate.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\Extensions\DependencyInjection.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\Filters\ExceptionFilter.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\Program.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\obj\Debug\net8.0\ProductContext.API.GlobalUsings.g.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\obj\Debug\net8.0\ProductContext.API.AssemblyInfo.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\obj\Debug\net8.0\ProductContext.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\appsettings.Development.json
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\appsettings.json
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\Dockerfile
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\ProductContext.API.http
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.API\Properties\launchSettings.json
+C:\Users\jhoni\source\repos\ProductContext\.dockerignore

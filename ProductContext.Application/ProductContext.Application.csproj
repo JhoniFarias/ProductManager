@@ -13,10 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ProductContext.Communication\ProductContext.Communication.csproj" />
     <ProjectReference Include="..\ProductContext.Domain\ProductContext.Domain.csproj" />
     <ProjectReference Include="..\ProductContext.Infrastructure\ProductContext.Infrastructure.csproj" />
-    <ProjectReference Include="..\ProductContext.Shared\ProductContext.Shared.csproj" />
   </ItemGroup>
 
 </Project>

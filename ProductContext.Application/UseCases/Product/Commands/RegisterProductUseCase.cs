@@ -1,8 +1,9 @@
 ﻿using AutoMapper;
 using ProductContext.Domain.Repositories;
-using ProductContext.Shared.Validators;
-using ProductContext.Shared.Exceptions;
-using ProductContext.Communication.Dtos;
+using ProductContext.Application.DTOs;
+using ProductContext.Domain.Validators;
+using ProductContext.Domain;
+using ProductContext.Application.UseCases.Product.Commands.interfaces;
 
 namespace ProductContext.Application.UseCases.Product.Commands
 {
@@ -19,22 +20,7 @@ namespace ProductContext.Application.UseCases.Product.Commands
         public async Task<Domain.Entities.Product> Handle(ProductDto productDto)
         {
             var product = _mapper.Map<Domain.Entities.Product>(productDto);
-
-            Validate(productDto);
-
             return await _productRepository.RegisterAsync(product);
-        }
-
-        public void Validate(ProductDto productDto)
-        {
-            var validator = new ProductValidator();
-            var result = validator.Validate(productDto);
-
-            if (!result.IsValid)
-            {
-                var errorMessage = result.Errors.Select(e => e.ErrorMessage).ToList();
-                throw new InvalidProductException(errorMessage);
-            }
         }
     }
 }

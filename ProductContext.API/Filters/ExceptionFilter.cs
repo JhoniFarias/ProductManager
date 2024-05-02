@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
-using ProductContext.Shared.Exceptions;
+using ProductContext.Domain;
 using System.Net;
 
 namespace ProductContext.API.Filters

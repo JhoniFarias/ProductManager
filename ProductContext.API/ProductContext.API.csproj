@@ -9,6 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NovaPasta\**" />
+    <Content Remove="NovaPasta\**" />
+    <EmbeddedResource Remove="NovaPasta\**" />
+    <None Remove="NovaPasta\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Controllers\WeatherForecastController.cs" />
     <Compile Remove="WeatherForecast.cs" />
   </ItemGroup>
@@ -26,7 +33,6 @@
   <ItemGroup>
     <ProjectReference Include="..\ProductContext.Application\ProductContext.Application.csproj" />
     <ProjectReference Include="..\ProductContext.Infrastructure\ProductContext.Infrastructure.csproj" />
-    <ProjectReference Include="..\ProductContext.Shared\ProductContext.Shared.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,17 @@
+"product-manager": sqp_b246b42df8cd58f8ee6923d0c74051a04bda16f0
+
+
+
+
+dotnet tool install --global dotnet-sonarscanner
+
+ dotnet sonarscanner begin /k:"product-manager" /d:sonar.host.url="http://localhost:9999"  /d:sonar.token="sqp_b246b42df8cd58f8ee6923d0c74051a04bda16f0" /d:sonar.coverageReportPaths="coverage/SonarQube.xml"^
+
+dotnet build
+
+ dotnet sonarscanner begin /k:"product-manager" /d:sonar.host.url="http://localhost:9999"  /d:sonar.token="sqp_b246b42df8cd58f8ee6923d0c74051a04bda16f0" /d:sonar.coverageReportPaths="coverage/SonarQube.xml"^
+
+reportgenerator "-reports:./coverage/*/coverage.cobertura.xml" "-targetdir:coverage" "-reporttypes:SonarQube"
+
+
+dotnet sonarscanner end /d:sonar.token="sqp_b246b42df8cd58f8ee6923d0c74051a04bda16f0"

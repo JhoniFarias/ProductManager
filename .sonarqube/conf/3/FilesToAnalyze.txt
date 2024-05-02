@@ -1,0 +1,14 @@
+﻿C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\Automapper\AutoMapperConfig.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\DTOs\ProductDto.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\DTOs\RequestProductDto.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\DTOs\ResponseProductDto.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\UseCases\Product\Commands\DisableProductUseCase.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\UseCases\Product\Commands\IDisableProductUseCase.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\UseCases\Product\Commands\IRegisterProductUseCase.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\UseCases\Product\Commands\IUpdateProductUseCase.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\UseCases\Product\Commands\RegisterProductUseCase.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\UseCases\Product\Commands\UpdateProductUseCase.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\UseCases\Product\Queries\IRequestProductByFilterUseCase.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\UseCases\Product\Queries\IRequestProductByIdUseCase.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\UseCases\Product\Queries\RequestProductByFilterUseCase.cs
+C:\Users\jhoni\source\repos\ProductContext\ProductContext.Application\UseCases\Product\Queries\RequestProductByIdUseCase.cs

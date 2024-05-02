@@ -1,24 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ProductContext.Domain.Validators;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ProductContext.Domain.Entities
 {
     public class Product : Entity
     {
-        protected Product() { }
+        protected Product(){}
 
-        public Product(string description, bool isActive, DateTime manufactureDate, DateTime expirationDate, Suplier suplier)
+        public Product(string description, DateTime manufactureDate, DateTime expirationDate, long suplierId, bool isActive = true)
         {
             Description = description;
             IsActive = isActive;
             ManufactureDate = manufactureDate;
             ExpirationDate = expirationDate;
-            Suplier = suplier;
+            SuplierId = suplierId;
+
+            Validate();
         }
 
         public string Description { get; private set; }
@@ -28,9 +25,17 @@ namespace ProductContext.Domain.Entities
         public virtual long SuplierId { get; private set; }
 
         [ForeignKey("SuplierId")]
-        public virtual Suplier Suplier { get; private set; }
+        public virtual Supplier Suplier { get; private set; }
 
 
         public void Disable() => this.IsActive = false;
+
+        private void Validate()
+        {
+            var result = new ProductValidator().Validate(this);
+
+            if (!result.IsValid)
+                throw new InvalidProductException(result.Errors.Select(p => p.ErrorMessage));
+        }
     }
 }
